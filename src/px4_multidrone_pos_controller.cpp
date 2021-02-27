@@ -269,42 +269,42 @@ int main(int argc, char **argv) {
     ParamSrv.request.TargetdroneID = TargetdroneID;
     ParamSrv.request.isMulti = isMulti;
 
-    if(isMulti) {
-        switch (CooperativePayload) {
-            case 0: {
-                pos_controller_GNC.ros_topic_setup(nh);
-                pos_controller_GNC.printf_param();
-                ParamSrv.request.controllername = "TCST2020";
-                break;
-            }
-            case 1: {
-                pos_controller_JGCD.ros_topic_setup(nh);
-                pos_controller_JGCD.printf_param();
-                ParamSrv.request.controllername = "JGCD2020";
-                break;
-            }
-            default: {
-                pos_controller_GNC.ros_topic_setup(nh);
-                pos_controller_GNC.printf_param();
-                ParamSrv.request.controllername = "TCST2020";
-                break;
-            }
-        }
-    } else {
-        switch (SingleUAVPayloadController) {
-            case 0: {
-                pos_controller_tie.printf_param();
-                ParamSrv.request.controllername = "TIE2019";
-                break;
-            }
-            default: {
-                pos_controller_tie.printf_param();
-                ParamSrv.request.controllername = "TIE2019";
-                break;
-            }
-        }
-    }
-    SendGeneralInfoToGroundstation(clientSendParameter, ParamSrv);
+    // if(isMulti) {
+    //     switch (CooperativePayload) {
+    //         case 0: {
+    //             pos_controller_GNC.ros_topic_setup(nh);
+    //             pos_controller_GNC.printf_param();
+    //             ParamSrv.request.controllername = "TCST2020";
+    //             break;
+    //         }
+    //         case 1: {
+    //             pos_controller_JGCD.ros_topic_setup(nh);
+    //             pos_controller_JGCD.printf_param();
+    //             ParamSrv.request.controllername = "JGCD2020";
+    //             break;
+    //         }
+    //         default: {
+    //             pos_controller_GNC.ros_topic_setup(nh);
+    //             pos_controller_GNC.printf_param();
+    //             ParamSrv.request.controllername = "TCST2020";
+    //             break;
+    //         }
+    //     }
+    // } else {
+    //     switch (SingleUAVPayloadController) {
+    //         case 0: {
+    //             pos_controller_tie.printf_param();
+    //             ParamSrv.request.controllername = "TIE2019";
+    //             break;
+    //         }
+    //         default: {
+    //             pos_controller_tie.printf_param();
+    //             ParamSrv.request.controllername = "TIE2019";
+    //             break;
+    //         }
+    //     }
+    // }
+    // SendGeneralInfoToGroundstation(clientSendParameter, ParamSrv);
     /******-------------------print parameters ---------------------******/
     PrintParam();
 
