@@ -309,7 +309,7 @@ int main(int argc, char **argv){
         DroneStateData.payload_pos[math_utils::Vector_Z] = PayloadPositionInertial(math_utils::Vector_Z);
 
         PubDroneState.publish(DroneStateData);
-        DisplayVisionResults(PayloadPositionInertial, PayloadVelocityInertial, PayloadPosition,PayloadVelocity, Ts);
+        // DisplayVisionResults(PayloadPositionInertial, PayloadVelocityInertial, PayloadPosition,PayloadVelocity, Ts);
         rate.sleep();
     }
 
