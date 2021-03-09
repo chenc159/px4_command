@@ -43,11 +43,11 @@ Limit:
 Pos_cascade_pid:
    Kp_xy : 0.95
    Kp_z : 1.0
-   Kp_vxvy : 0.09
-   Kp_vz : 0.2
+   Kp_vxvy : 0.08
+   Kp_vz : 0.3
    Ki_vxvy : 0.02
    Ki_vz : 0.02
-   Kd_vxvy : 0.01
+   Kd_vxvy : 0.0
    Kd_vz : 0.0
    Hover_throttle : 0.45
    MPC_VELD_LP: 5.0
