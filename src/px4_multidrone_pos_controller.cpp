@@ -310,16 +310,17 @@ int main(int argc, char **argv) {
 
     /* set the parameter field on the ground station */
 
-    int check_flag;
-    // check the data output on
-    ROS_INFO("Please check the parameter and setting, enter 1 to continue, else for quit: ");
-    cin >> check_flag;
-    if(check_flag != 1) {
-        ROS_WARN("Found something wrong? terminating node ...");
-        return -1;
-    }
-    ROS_INFO("Parameter ok. Ready to start controller ...");
-    // waiting for the
+    // This input flag/key is a precaution for param
+    // int check_flag;
+    // // check the data output on
+    // ROS_INFO("Please check the parameter and setting, enter 1 to continue, else for quit: ");
+    // cin >> check_flag;
+    // if(check_flag != 1) {
+    //     ROS_WARN("Found something wrong? terminating node ...");
+    //     return -1;
+    // }
+    // ROS_INFO("Parameter ok. Ready to start controller ...");
+    // // waiting for the
     for(int i = 0; i < 50; i++) {
         ros::spinOnce();
         rate.sleep();
